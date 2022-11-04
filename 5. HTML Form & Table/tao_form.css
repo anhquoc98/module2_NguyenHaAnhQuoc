@@ -1,7 +1,12 @@
 body{
     background: seagreen;
 }
+form{
+    background: aliceblue;
+    border: #8800ff;
+}
 h2{
+    background: black;
     color: #ff0051;
     text-align: center;
 }
@@ -16,4 +21,8 @@ li{
 td{
     color: #ff0051;
     text-align: center;
+}
+input{
+    color: blue;
+    text-align: left;
 }
