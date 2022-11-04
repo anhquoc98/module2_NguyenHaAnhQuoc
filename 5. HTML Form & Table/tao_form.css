@@ -9,3 +9,11 @@ p{
     color: seagreen;
     text-align: center;
 }
+li{
+    color: red;
+    text-align: center;
+}
+td{
+    color: #ff0051;
+    text-align: center;
+}
