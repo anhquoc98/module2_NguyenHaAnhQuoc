@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="ketqua"></p>
+<table>
+    <tr>
+        <td>
+            <button class="calum" value="7">7</button>
+        </td>
+        <td>
+            <button class="calum" value="8">8</button>
+        </td>
+        <td>
+            <button class="calum" value="9">9</button>
+        </td>
+        <td>
+            <button class="calum" value="*">*</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button class="calum" value="4">4</button>
+        </td>
+        <td>
+            <button class="calum" value="5">5</button>
+        </td>
+        <td>
+            <button class="calum" value="6">6</button>
+        </td>
+        <td>
+            <button class="calum" value="/">/</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button class="calum" value="1">1</button>
+        </td>
+        <td>
+            <button class="calum" value="2">2</button>
+        </td>
+        <td>
+            <button class="calum" value="3">3</button>
+        </td>
+        <td>
+            <button class="calum" value="+">+</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button class="calum" onclick="undo()">Dell</button>
+        </td>
+        <td>
+            <button class="calum" onclick="clean()">Ac</button>
+        </td>
+        <td>
+            <button class="calum" onclick="equal()">=</button>
+        </td>
+        <td>
+            <button class="calum" value="-">-</button>
+            <button class="calum" value=".">.</button>
+        </td>
+    </tr>
+</table>
+<script>
+    const number = document.getElementsByClassName('calum');
+    const result = document.getElementById('ketqua');
+    for (let i of number) {
+        i.addEventListener('click', function () {
+            result.innerHTML += this.value
+        })
+    }
+
+    function undo() {
+        let res = result.innerHTML;
+        result.innerHTML = result.substring(0, res.length - 1)
+    }
+
+    function equal() {
+        let res = result.innerHTML;
+        let output = eval(res);
+        result.innerHTML = output;
+    }
+
+    function clean() {
+        result.innerHTML = '';
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<center><h2 style="background-color: red">Doanh Thu Trong Tháng</h2>
+    <table border="2">
+        <tr>
+            <td>Doanh Thu Mặt Hàng</td>
+            <td>Tiền Hoa Hồng</td>
+        </tr>
+        <tr>
+            <th>DoanhThu>100</th>
+            <th>Tiền lương x 10%</th>
+        </tr>
+        <tr>
+            <th>DoanhThu>250</th>
+            <th>Tiền lương x 15%</th>
+        </tr>
+        <tr>
+            <th>DoanhThu>400</th>
+            <th>Tiền lương x 20%</th>
+        </tr>
+    </table>
+    <br>
+    <input type="text" id="salary" placeholder="nhập lương của bạn" style="width: 180px"/>
+    <input type="text" id="turnover" placeholder="Doanh thu trong tháng của bạn"style="width: 180px"/>
+    <button onclick="luong()">Convert</button>
+    <p id="result">Tiền Lương Sau Khi Được Nhận Hoa Hồng</p>
+</center>
+<script>
+    function luong() {
+        let salary = parseInt(document.getElementById('salary').value);
+        let turnover = parseInt(document.getElementById('turnover').value);
+        let count ;
+        if (turnover>400) {
+            count = (salary * 0.2) +salary ;
+        } else if (turnover>250) {
+            count = (salary * 0.15) + salary;
+        } else if (turnover >100) {
+            count = (salary * 0.1) + salary;
+        }
+        document.getElementById('result').innerHTML = 'Tiền Lương Nhận Được Trong Tháng' + count;
+    }
+</script>
+</body>
+</html>
