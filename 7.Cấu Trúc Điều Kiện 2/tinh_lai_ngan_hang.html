@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết chương trình tính lãi ngân hàng (lãi mẹ đẻ lãi con) khi biết số tiền ban đầu, số tháng cho vay và lãi
+        xuất hàng tháng</title>
+    <link rel="stylesheet" href="../5. HTML Form & Table/tao_form.css">
+</head>
+<body>
+<center>
+    <form>
+        <h2>Chào bạn đến với Ngân Hàng AnhQuocBank</h2>
+        <h5>Mời bạn nhập thông tin của bạn</h5>
+        <p>Họ Và Tên:</p>
+        <input type="text"><br>
+        <p>Email:</p>
+        <input type="text"><br>
+        <p>Số điện thoại:</p>
+        <input type="number"><br>
+        <p>Giới tính:</p>
+        <input type="radio" name="gender">Nam
+        <input type="radio" name="gender">Nữ
+        <br></br>
+        <h5>Bạn muốn vay bao nhiêu</h5>
+        <input type="text" id="money" placeholder="Số tiền bạn muốn vay"/>
+        <br><br>
+        <input type="text" id="month" placeholder="Bạn trả trong nhiêu tháng">
+        <br><br>
+        <button onclick="bank()"> Conver</button>
+        <p id="money1">Tiền bạn phải trả</p>
+        <input type="submit" value="Xác nhận thông tin">
+        <input type="reset" value="Nhập lại thông tin">
+    </form>
+</center>
+</body>
+<script>
+    function bank() {
+        let money = parseFloat(document.getElementById('money').value);
+        let month = parseInt(document.getElementById('month').value);
+        let pay;
+        if (money < 6) {
+            pay = money * (1 + 1 / 10 * month);
+        }
+        if (month <= 12) {
+            pay = money * (1 + 1 / 15 * month)
+        }
+        if (month <= 24) {
+            pay = money * (1 + 1 / 24 * month)
+        }
+        document.getElementById('money1').innerHTML = 'Tiền bạn trả trong vòng' + month + ' tháng = ' + pay;
+    }
+</script>
+</html>

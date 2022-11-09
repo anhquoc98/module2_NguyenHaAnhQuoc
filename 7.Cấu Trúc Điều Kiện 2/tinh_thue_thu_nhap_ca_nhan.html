@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../5. HTML Form & Table/tao_form.css">
+</head>
+<body>
+<center><img src="2022-11-09 14_41_40-Cách tính thuế TNCN năm 2022mới nhất - Cốc Cốc.png" height="311" width="855"/>
+    <br><input type="number" id="luong1" placeholder="nhập lương của bạn"/>
+    <button type="button" onclick="salary1()">Conver</button>
+    <p id="result">Tiền bạn nhận được</p>
+</center>
+</body>
+<script>
+    function salary1() {
+        let a = parseFloat(document.getElementById("luong1").value);
+        let sum ;
+        let result = '';
+        if (a < 5) {
+            result = 'Chúc mừng bạn ko phải nộp thuế';
+        }
+        else if (a == 5) {
+            result = 'Bạn phải nộp thuế 5%'
+            sum = a - (a * 5/100);
+        } else if (a > 5 && a <= 10) {
+            result = 'Bạn phải nộp thuế 10%'
+            sum = a - (a * 10/100);
+        } else if (a > 10 && a <= 18) {
+            result = 'Bạn phải nộp thuế 15%'
+            sum = a - (a * 15 / 100);
+        } else if (a > 18 && a <= 32) {
+            result = 'Bạn phải nộp thuế 20%'
+            sum = a - (a * 20 / 100);
+        } else if (a > 32 && a <= 52) {
+            result = 'Bạn phải nộp thuế 25%'
+            sum = a - (a * 25 / 100);
+        } else if (a > 52 && a <= 80) {
+            result = 'Bạn phải nộp thuế 30%'
+            sum = a - (a * 30 / 100);
+        } else if (a > 80) {
+            result = 'Bạn phải nộp thuế 35%'
+            sum = a - (a * 20 / 100);
+        }
+        document.getElementById('result').innerHTML = result + 'Tổng lương bạn nhận được' + sum;
+    }
+</script>
+</html>

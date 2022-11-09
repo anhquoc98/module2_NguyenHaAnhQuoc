@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../5. HTML Form & Table/tao_form.css">
+</head>
+<body>
+<center>
+    <table border="3">
+        <tr>
+            <td>Bậc</td>
+            <td>Tiền</td>
+        </tr><tr>
+        <td>Bậc 1(0 đến 50kWh)</td>
+        <td>1.678 đồng/kWh</td>
+    </tr><tr>
+        <td>Bậc 2 (51 đến 100kWh)</td>
+        <td>1.734 đồng/kWh</td>
+    </tr><tr>
+        <td>Bậc 3 (101 đến 200 kWh)</td>
+        <td>2.014 đồng/kWh</td>
+    </tr><tr>
+        <td>Bậc 4 (201 đến 300 kWh)</td>
+        <td>2.536 đồng/kWh</td>
+    </tr><tr>
+        <td>Bậc 5 (301 đến 400 kWh)</td>
+        <td>2.834 đồng/kWh</td>
+    </tr><tr>
+        <td>Bậc 6 (401 kWh trở lên)</td>
+        <td>2.927 đồng/kWh</td>
+    </tr>
+    </table>
+
+<input type="text" id="soDien" placeholder="Nhập số điện">
+<button onclick="tinhgiadien()"> conver</button>
+<p id="result">Tiền điện bạn phải trả trong tháng</p>
+</center>
+</body>
+<script>
+    function tinhgiadien() {
+        let result;
+        let a = parseFloat(document.getElementById('soDien').value);
+        if (a > 0 && a <= 50) {
+            result = a * 1.678;
+        } else if (a > 50 && a <= 100) {
+            result = a * 1.734;
+        } else if (a > 100 && a <= 200) {
+            result = a * 2.014;
+        } else if (a > 200 && a <= 300) {
+            result = a * 2536;
+        } else if (a > 300 && a <= 400) {
+            result = a * 2.834;
+        } else if (a > 400) {
+            result = a * 2.927;
+        }
+        document.getElementById('result').innerHTML = 'số tiền điện bạn phải trả = ' + result+'Đ' +'<br> vat (10%)  Tổng = ' + (result * 0.1+result)+'Đ';
+
+    }
+</script>
+</html>

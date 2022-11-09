@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="age" placeholder="Nhập tuổi của bạn"/>
+<button onclick="age()">Conver</button>
+<p id="result"></p>
+<script>
+function age() {
+let result ='';
+    let num =document.getElementById("age").value;
+if (num <0){
+    result = 'Bạn còn chưa sinh ra'
+}
+else if(num<18){
+    result ='Bạn là thiếu nhi'
+}
+else if (num<=60){
+    result = 'Tuổi trung niên';
+}
+else if (num<120){
+    result='Bạn già quá rồi';
+}
+else {
+    result='Ăn j trâu thế chưa die luôn';
+}
+document.getElementById('result').innerHTML =result;
+}
+</script>
+</body>
+</html>
