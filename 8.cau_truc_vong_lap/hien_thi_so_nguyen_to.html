@@ -6,24 +6,41 @@
 </head>
 <body>
 <script>
-    let n = 2;
-    let kiemtra;
+      let numb ;
+      let kiemtra;
+      let count = 0;
+      while (count < 20) {
+          kiemtra = true;
+          numb= +prompt('nhập số nguyên')
+          for (let i = 2; i < numb; i++) {
+              if (numb % i == 0 &&numb==1) {
+                  kiemtra = false;
+                  break;
+              }
+          }
+          if (kiemtra) {
+              kiemtra = true;
+              document.write(numb + 'Số nguyên tố<br>')
+              count++;
+          }
+      }
+    /*let n = 2;
+    let kiemtra =true;
     let count = 0;
     while (count < 20) {
         kiemtra = true;
         for (let i = 2; i < n; i++) {
-            if (n % i == 0) {
+            if (n % i === 0) {
                 kiemtra = false;
                 break;
             }
         }
         if (kiemtra) {
-            kiemtra = true;
-            document.write(n + 'Số nguyên tố<br>')
+            document.writeln(n + 'số nguyên tố< br >');
             count++;
         }
         n++;
-    }
+    }*/
 </script>
 </body>
 </html>
