@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>lấy thông tin nhiệt độ hiện tại được nhập bởi người truy cập. Nếu nhiệt độ nhập vào trên 100, yêu cầu người dùng giảm nhiệt độ. Nếu nhiệt độ dưới 20, yêu cầu người dùng tăng nhiệt độ.</title>
+</head>
+<body>
+<script>
+    let a =+prompt('Nhập nhiệt độ của bạn');
+    while (a>=100 ||a<20){
+        if (a<20){
+            alert('người dùng tăng nhiệt độ')
+        }
+        else if (a=>100){
+            alert('người dùng giảm nhiệt độ')
+        }
+        a =+prompt('nhập lại nhiệt độ của bạn');
+
+    }document.write('Nhiệt độ của bạn bình thường')
+</script>
+</body>
+</html>

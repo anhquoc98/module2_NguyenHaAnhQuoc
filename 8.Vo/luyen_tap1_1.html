@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1: Sử dụng vòng lặp để đếm từ 1 đến 100. Khi số là 99, hiển thị hộp thoại thông báo là đã hoàn
+        thành.</title>
+</head>
+<body>
+<div id="bai1"></div>
+<script>
+    let count = 0;
+    for (let i = 1; i <= 99; i++) {
+        count++;
+        document.write(count + ' ')
+        if (count == 99) {
+            document.write('Đã hoàn thành<br>')
+        }
+    }
+    let a =confirm('Bạn muốn chạy lên 100');
+    if (a == true){
+        count ++
+        document.write(count)
+    }
+</script>
+</body>
+</html>

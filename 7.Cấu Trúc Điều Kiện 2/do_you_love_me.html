@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../5. HTML Form & Table/tao_form.css">
+</head>
+<body style="background-color: pink">
+<h2>Do You Love Me ?</h2>
+<center>
+    <input type="button" onclick="yes()" value="Yes">
+    <input type="button" id="no1" value="No" onmouseover="no()"/>
+</center>
+<script>
+    function yes() {
+        alert('Yes.Marry You <3')
+    }
+
+    function no() {
+        let x = Math.round(Math.random() * window.innerWidth);
+        let y = Math.round(Math.random() * window.innerHeight);
+        document.getElementById('no1').style.left = x + 'px';
+        document.getElementById('no1').style.top = y + 'px';
+    }
+    window.onload = function () {
+        document.getElementById('no1').style.position = 'absolute';
+    }
+
+</script>
+</body>
+</html>

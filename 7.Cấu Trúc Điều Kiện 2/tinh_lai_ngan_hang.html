@@ -8,7 +8,6 @@
 </head>
 <body>
 <center>
-    <form>
         <h2>Chào bạn đến với Ngân Hàng AnhQuocBank</h2>
         <h5>Mời bạn nhập thông tin của bạn</h5>
         <p>Họ Và Tên:</p>
@@ -30,7 +29,6 @@
         <p id="money1">Tiền bạn phải trả</p>
         <input type="submit" value="Xác nhận thông tin">
         <input type="reset" value="Nhập lại thông tin">
-    </form>
 </center>
 </body>
 <script>
@@ -39,13 +37,16 @@
         let month = parseInt(document.getElementById('month').value);
         let pay;
         if (money < 6) {
-            pay = money * (1 + 1 / 10 * month);
+            pay = money * (1 + 1/10 * month);
         }
-        if (month <= 12) {
+        else if (month <= 12) {
             pay = money * (1 + 1 / 15 * month)
         }
-        if (month <= 24) {
-            pay = money * (1 + 1 / 24 * month)
+        else if (month <= 24) {
+            pay = money * (1 + 1 / 20 * month)
+        }
+        else if (month > 24) {
+            pay = money * (1 + 1 / 25 * month)
         }
         document.getElementById('money1').innerHTML = 'Tiền bạn trả trong vòng' + month + ' tháng = ' + pay;
     }
