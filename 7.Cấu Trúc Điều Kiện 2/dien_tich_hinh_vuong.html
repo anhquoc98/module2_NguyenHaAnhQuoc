@@ -6,9 +6,14 @@
 </head>
 <body>
 <script>
-    let a =+prompt('Nhập cạnh hình vuông')
-    let s = a*a;
-    document.write('Diện tích hình vuông='+s)
+    let a =+prompt('Nhập cạnh hình vuông');
+    if (a>0) {
+        let s = a * a;
+        document.write('Diện tích hình vuông=' + s)
+    }
+    else {
+        document.write('Không thoả mãn điều kiện nên không phải hình chữ nhật')
+    }
 </script>
 </body>
 </html>

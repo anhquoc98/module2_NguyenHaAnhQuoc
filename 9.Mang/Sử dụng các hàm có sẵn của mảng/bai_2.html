@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Viết một chương trình nhận một số nhập vào và chèn dấu (-) giữa 2 số chẵn.
+        Ví dụ nếu bạn nhập vào 025468 thì kết quả của chương trình sẽ là 0-254-6-8.</title>
+</head>
+<body>
+<script>
+    let numb =+prompt('Độ dài của dãy số');
+    let a =[];
+    let b=[]
+    for (let i=0;i<numb;i++){
+        a[i] =+prompt('Số bạn cần nhập');
+        if (a[i]%2 ==0 ){
+            b.push('-',a[i])
+        }
+        else {
+            b.push(a[i]);
+        }
+    }
+    document.write(b.join(''))
+</script>
+</body>
+</html>

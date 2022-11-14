@@ -8,8 +8,14 @@
 <script>
     let a =+prompt('nhập chiều rộng hình chữ nhật');
     let b =+prompt('nhập chiều dài hình chữ nhật');
-let s =a*b;
-document.write('Diện tích hình chữ nhật= '+s)
+    if (a>0&&b>0) {
+        let s = a * b;
+
+        document.write('Diện tích hình chữ nhật= ' + s)
+    }
+    else {
+        document.write('Không phải hình chữ nhật nên không có diện tích')
+    }
 </script>
 </body>
 </html>

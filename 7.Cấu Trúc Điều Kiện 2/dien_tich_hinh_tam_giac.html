@@ -8,8 +8,13 @@
 <script>
     let a=+prompt('cạnh kề 1');
     let b=+prompt('cạnh kề 2');
-    let s=1/2*a*b;
-    document.write('Diện tích hình tam giác ='+s)
+    if (a>0&&b>0) {
+        let s = 1 / 2 * a * b;
+        document.write('Diện tích hình tam giác =' + s)
+    }
+    else {
+        document.write('không thoả mãn điều kiện nên không phải hình tam giác')
+    }
 </script>
 </body>
 </html>

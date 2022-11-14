@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phát triển một ứng dụng từ điển đơn giản.
+        Ứng dụng cho phép tra cứu các từ tiếng Anh sang tiếng Việt.
+        Danh sách các từ được lưu trữ trong các mảngPhát triển một ứng dụng từ điển đơn giản.
+        Ứng dụng cho phép tra cứu các từ tiếng Anh sang tiếng Việt. Danh sách các từ được lưu trữ trong các mảng</title>
+</head>
+<body>
+<input id="tudien" type="text">
+<button onclick="tuDien()">Dịch</button>
+<p id="dich"></p>
+<script>
+    function tuDien() {
+        let arrViet = ['táo', 'chuối', 'sách', 'bút', 'cam'];
+        let arrAnh = ['apple', 'banana', 'book', 'ben', 'orange'];
+        let tudien = document.getElementById('tudien').value;
+        let indexArr = 0;
+        let result = ''
+        for (let i = 0; i < arrViet.length; i++) {
+            if (tudien ==arrViet[i]) {
+                indexArr = i;
+                for (let j = 0; j < arrAnh.length; j++) {
+                    if (indexArr == j) {
+                        dich =arrAnh[j];
+                    }
+
+                }
+            }
+        }
+        document.getElementById('dich').innerHTML = result;
+    }
+</script>
+</body>
+</html>

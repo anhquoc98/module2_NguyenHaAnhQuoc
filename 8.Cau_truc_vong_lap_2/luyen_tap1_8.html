@@ -9,25 +9,27 @@
 <button onclick="game()" value="Bắt đầu">Bắt đầu</button>
 <script>
     function game() {
-        let number = +prompt('Bạn muốn đoán bao nhiêu');
+        let number1 = +prompt('Bạn muốn đoán bao nhiêu');
+        let number = Math.floor(Math.random() * number1);
         let a = +prompt('Nhập số bạn đoán')
         let count =0;
         while (count<3){
             if (number !==a){
                 if (number>a){
-                    alert('bạn đoán ko đúng số.<br> Số bạn đoán bé hơn');
+                    alert('bạn đoán ko đúng số.'+'<br>'+' Số bạn đoán bé hơn');
                 }
                 else if (number<a){
-                    alert('bạn đoán ko đúng số.<br> Số bạn đoán lớn hơn');
+                    alert('bạn đoán ko đúng số.'+'<br>'+' Số bạn đoán lớn hơn');
                 }
                 count++;
+
             }
             a=+prompt('Mời bạn nhập lại số ');
             if (number ==a){
                 alert('chúc mừng bạn đã chọn đúng');
                 break;
             }
-        }
+        }document.write('Bạn hết số lần đoán')
     }
 </script>
 </body>
