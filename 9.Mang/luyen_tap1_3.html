@@ -11,16 +11,13 @@
     let a=+prompt('Độ dài của mảng');
     let numb=[];
     let sum =0;
-    let max =[];
+    let max;
     let avg= 0
     for (let i=0;i<a;i++){
         numb[i]=+prompt('nhập số nguyên'+i)
         sum +=numb[i];
         avg =sum/a;
-        if (max<numb[i]){
-            max=numb[i];
-        }
-    }
+    }max =Math.max.apply(null,numb)
     document.write('Số lớn nhất trong mảng'+max+'<br>'+'Tổng các gía trị phần tử trong mảng'+sum+'<br>Giá Trị trung bình của các phần tử trong mảng'+avg)
 </script>
 </body>

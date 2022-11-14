@@ -6,7 +6,23 @@
 </head>
 <body>
 <script>
-      let numb ;
+    let number;
+
+    let count1 =0;
+    while (count1<5){
+        number=+prompt('Nhập số nguyên');
+        let count =0
+        for (let i=1;i<=number;i++){
+            if (number%i ==0){
+                count++;
+            }
+        }
+        if (count ==2){
+            document.write(number+'||')
+            count1++;
+        }
+    }
+   /*   let numb ;
       let kiemtra;
       let count = 0;
       while (count < 20) {
@@ -23,7 +39,7 @@
               document.write(numb + 'Số nguyên tố<br>')
               count++;
           }
-      }
+      }*/
     /*let n = 2;
     let kiemtra =true;
     let count = 0;

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử.
+        Chương trình sắp xếp mảng theo thứ tự giảm dần và hiển thị ra mảng đã được sắp xếp.</title>
+</head>
+<body>
+<script>
+    let a = +prompt('Tạo 1 mảng độ dài số nguyên V');
+    let numb = [];
+    for (let i = 0; i < a; i++) {
+        numb[i] = +prompt('Nhập số');
+    }
+    document.write(numb)
+    numb.sort(function (a, b) {
+        return a - b;
+    })
+    document.write('đã sắp xếp'+numb)
+</script>
+</body>
+</html>
