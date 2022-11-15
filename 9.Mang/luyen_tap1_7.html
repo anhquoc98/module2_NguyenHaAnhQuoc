@@ -2,9 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title> Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử, nhập/tạo phần tử số nguyên V.
+        Chương trình kiểm tra xem V có thuộc mảng đã cho không, nếu V thuộc mảng đã cho xoá V khỏi mảng
+        (Bản chất việc xoá ở đây tức là dịch phần tử ở bên phải V sang vị trí của V, và gán 0 cho phần tử cuối cùng của
+        mảng)</title>
 </head>
 <body>
+<script>
+    let a = +prompt('Tạo 1 mảng độ dài số nguyên V');
+    let numb = [];
+    let v = +prompt('Nhập phần tử V')
+    for (let i = 0; i < a; i++) {
+        numb[i] = +prompt('Nhập số');
+        if (numb[i]==v) {
+            numb.splice(i,1)
+            numb.push(0)
+        }
+    }
+    document.write(numb)
 
+
+</script>
 </body>
 </html>

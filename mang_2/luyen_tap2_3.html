@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết một chương trình khai báo một mảng ký tự và kích thước của mảng.
+        Chương trình này đếm số ký tự số trong mảng</title>
+</head>
+<body>
+<script>
+    let a =prompt('Nhập 1 mảng kí tự');
+    let count =0;
+    let b=a.split('')
+    for (let i=0;i<b.length;i++){
+        if (isNaN(b[i]) )
+        count++;
+    }
+    document.write('số kí tự trong mảng='+count)
+</script>
+</body>
+</html>

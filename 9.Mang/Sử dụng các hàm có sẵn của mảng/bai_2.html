@@ -12,7 +12,7 @@
     let b=[]
     for (let i=0;i<numb;i++){
         a[i] =+prompt('Số bạn cần nhập');
-        if (a[i]%2 ==0 ){
+        if (a[i]%2 ==0 &&a[i-1]%2==0){
             b.push('-',a[i])
         }
         else {

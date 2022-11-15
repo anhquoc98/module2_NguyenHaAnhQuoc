@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết một chương trình để đếm số từ trong một chuỗi</title>
+</head>
+<body>
+<script>
+    let a =prompt('Nhập 1 mảng kí tự');
+    let count =0;
+    let b=a.split('')
+    for (let i=0;i<b.length;i++){
+        if (!isNaN(b[i]) )
+            count++;
+    }
+    document.write('đếm số trong mảng='+count)
+</script>
+</body>
+</html>
