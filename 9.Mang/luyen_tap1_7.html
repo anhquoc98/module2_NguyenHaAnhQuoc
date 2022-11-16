@@ -11,20 +11,30 @@
 <script>
     let a = +prompt('Tạo 1 mảng độ dài số nguyên V');
     let numb = [];
-    let count=0
-    let v = +prompt('Nhập phần tử V')
     for (let i = 0; i < a; i++) {
         numb[i] = +prompt('Nhập số');
-        if (numb[i]==v) {
-            numb.splice(i,1);
-            count++
+    }
+    let v = +prompt('Nhập phần tử V')
+    for (let j = 0; j < numb.length; j++) {
+        if (numb[j] == v) {            //ngay đoạn này thay bằng cách 2
+            numb.splice(j, 1)
+            j--
+            numb.push(0)
         }
+    }
+    document.write(numb)
 
+    //cách 2 mà bị giấu ','
+    //let count =0
+    /*if (numb[j]==v) {  //thay đoạn này
+        numb.splice(i,1);
+        count++
     }
-    for (let i=0;i<count;i++){
-        numb.push(0)
-    }
-    document.write(numb.join(''))
+}
+for (let i=0;i<count;i++){
+    numb.push(0)
+}
+document.write(numb.join(''))*/
 </script>
 </body>
 </html>
