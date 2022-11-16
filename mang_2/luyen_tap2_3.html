@@ -7,14 +7,15 @@
 </head>
 <body>
 <script>
-    let a =prompt('Nhập 1 mảng kí tự');
-    let count =0;
-    let b=a.split('')
-    for (let i=0;i<b.length;i++){
-        if (isNaN(b[i]) )
-        count++;
+    let a = prompt('Nhập 1 Chuổi kí tự');
+    let count = 0;
+    let b = a.split('')
+    for (let i = 0; i < b.length; i++) {
+        if (!isNaN(b[i])) {
+            count++;
+        }
     }
-    document.write('số kí tự trong mảng chỉ lấy String='+count);
+    document.write('số kí tự trong mảng chỉ lấy Number=' + count);
 </script>
 </body>
 </html>

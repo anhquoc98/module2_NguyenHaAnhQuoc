@@ -10,7 +10,7 @@
     let count =0;
     let b=a.split('')
     for (let i=0;i<b.length;i++){
-        if (!isNaN(b[i]) )
+        if (isNaN(b[i]) )
             count++;
     }
     document.write('đếm số trong mảng='+count)

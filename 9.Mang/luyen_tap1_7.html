@@ -11,17 +11,20 @@
 <script>
     let a = +prompt('Tạo 1 mảng độ dài số nguyên V');
     let numb = [];
+    let count=0
     let v = +prompt('Nhập phần tử V')
     for (let i = 0; i < a; i++) {
         numb[i] = +prompt('Nhập số');
         if (numb[i]==v) {
             numb.splice(i,1);
+            count++
         }
 
-    }numb.push(0)
+    }
+    for (let i=0;i<count;i++){
+        numb.push(0)
+    }
     document.write(numb.join(''))
-
-
 </script>
 </body>
 </html>
