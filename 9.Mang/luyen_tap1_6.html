@@ -8,19 +8,17 @@
 </head>
 <body>
 <script>
-    let a=+prompt('Tạo 1 mảng độ dài số nguyên V');
-    let numb =[];
-    for (let i=0; i<a;i++){
-        numb[i]=+prompt('Nhập số');
-        if (numb[i] >0){
-            alert('V is in the array')
-        }
-        else  if (numb[i]<=0){
-            alert('V is not in the array');
-            break;
-        }
+    let a = +prompt('Tạo 1 mảng độ dài số nguyên ');
+    let numb = [];
+    for (let i = 0; i < a; i++) {
+        numb[i] = +prompt('Nhập số');
     }
-
+    let v = +prompt('nhập số V');
+    if (numb.indexOf(v) !== -1) {
+        console.log('V is in the array')
+    } else {
+        console.log('V is not in the array')
+    }
 </script>
 </body>
 </html>
