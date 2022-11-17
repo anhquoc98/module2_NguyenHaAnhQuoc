@@ -6,7 +6,9 @@
 </head>
 <body>
 <script>
-let numb = +prompt('Kiểm tra số')
+    for (let i=0;i<10000;i++){
+        isPrime(i)
+    }
 isPrime(numb)
     function isPrime(number) {
         let count =0
@@ -16,10 +18,7 @@ isPrime(numb)
             }
         }
         if (count ==2){
-            alert('Number là số nguyên tố')
-        }
-        else {
-            alert('Không phải là số nguyên tố')
+        document.writeln(number)
         }
     }
 </script>
