@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết hàm nhận vào 3 số nguyên bất kỳ, trả về số nguyên có giá trị nhỏ nhất</title>
+</head>
+<body>
+<script>
+    function min(a, b, c) {
+        let result = [a, b, c];
+        let min = Math.min.apply(null, result);
+        return min
+    }
+
+    let numb = +prompt("Nhập số 1");
+    let numb1 = +prompt("Nhập số 2");
+    let numb2 = +prompt("Nhập số 3");
+    document.writeln("Kiểm tra số bé nhất ="+min(numb, numb1, numb2));
+</script>
+</body>
+</html>

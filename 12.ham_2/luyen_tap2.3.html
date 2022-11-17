@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết hàm tính giai thừa của một số nguyên bất kỳ được đưa vào. Gọi hàm vừa xây dựng được.</title>
+</head>
+<body>
+<script>
+    function factorial(a) {
+        if (a == 2) {
+            return 2;
+        }
+        return a * factorial(a - 1);
+    }
+
+    let a = +prompt("nhập số tính giai thừa");
+    document.writeln("Giai thừa của 1 số: " + factorial(a))
+
+</script>
+</body>
+</html>
