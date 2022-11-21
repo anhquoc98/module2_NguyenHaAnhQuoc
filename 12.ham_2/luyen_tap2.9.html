@@ -8,21 +8,27 @@
 <body>
 <script>
     function result(a,b) {
-        if (a.indexOf(b) != -1){
-            return b
+        let count =0;
+        for (let i=0;i<a.length;i++){
+            if (a[i]==b){
+                count++
+            }
+        }
+        if (count>0){
+            return alert('số lần xuất hiện trong mảng'+count+'là giá trị '+b);
         }
         else {
-            return -1
+            return alert(-1);
         }
 
     }
     let str1 =[];
-    let length=+prompt("chiều dài mảng ký tự")
+    let length=+prompt("chiều dài mảng ký tự");
     for (let i=0;i<length;i++){
-        str1[i]=prompt("Nhập kí tự"+'['+i+']')
+        str1[i]=prompt("Nhập kí tự"+'['+i+']');
     }
-    let str =prompt("nhập ký tự")
-    alert(result(str1,str))
+    let str =prompt("nhập ký tự");
+   result(str1,str)
 </script>
 </body>
 </html>

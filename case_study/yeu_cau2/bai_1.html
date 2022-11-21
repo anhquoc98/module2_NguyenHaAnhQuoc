@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let salary = +prompt("Nhập lương nhân viên");
+    if (salary <= 7) {
+        result = salary-salary * 5 / 100 ;
+        alert('Lương của bạn đã nộp thuế: ' + result)
+    } else if (salary > 7 && salary < 15) {
+        result = salary-salary * 10 / 100 ;
+        alert('Lương của bạn đã nộp thuế: ' + result)
+    } else if (salary == 15) {
+        result = salary-salary * 20 / 100;
+        alert('Lương của bạn đã nộp thuế: ' + result +'tr')
+    }
+
+
+</script>
+</body>
+</html>

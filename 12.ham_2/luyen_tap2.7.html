@@ -7,12 +7,15 @@
 <body>
 <script>
     function reverse(a, b) {
-     document.writeln("đổi chổ 2 số:<br> +Số thứ 1 ="+b+"<br>+Số thứ 2="+a)
+        let c = a;
+        a = b;
+        b = c;
+        alert('số nguyên thứ 1 ='+a +' số nguyên thứ 2 = '+b)
     }
 
     let numb = +prompt("nhập số thứ 1");
     let numb1 = +prompt("nhập số thứ 2");
-    reverse(numb,numb1)
+    reverse(numb, numb1)
 </script>
 </body>
 </html>
