@@ -19,8 +19,24 @@
         getdoC(doc){
             this.doC=doc
         }
+        setDoC(doc){
+            if (doc>(-273)){
+                this.doC = doc
+            }
+            else {
+                let flag = true;
+                do {
+                    let doC = +prompt("Nhập lại độ C lớn hơn -273");
+                    if (doC >-273)
+                        flag = false
+                    doC=this.doC
+                } while (flag)
+            }
+        }
     }
     let nhietDo=new Temperature(25);
+    let c=nhietDo.getdoC(30)
+    nhietDo.setDoC(c)
     nhietDo.doK();
     nhietDo.doF()
 </script>
