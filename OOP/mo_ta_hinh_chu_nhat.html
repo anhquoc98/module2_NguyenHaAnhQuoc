@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    canvas{
+        border: solid darkblue;
+        background-color: #2efdff;
+    }
+</style>
+<body>
+<canvas id="hcn"></canvas>
+<script>
+    class Rectangle {
+        constructor(weight, height) {
+            this.weight = weight;
+            this.height = height;
+        }
+
+        perimeter() {
+            document.writeln('chu vi hình chữ nhật :' + (this.weight + this.height) * 2)
+        }
+
+        area() {
+            document.writeln('diện tích hình chữ nhật:' + this.weight * this.height)
+        }
+        drawRetanmgle(){
+            let ctx = document.getElementById("hcn").getContext("2d");
+             ctx.fillStyle='#fa4b2a';
+             ctx.fillRect(10, 10, this.weight, this.height)
+        }
+        getWeightAndHeight(weight,height){
+            this.height =height;
+            this.weight =weight;
+        }
+
+    }
+
+    let rectangle = new Rectangle(200,50)
+    rectangle.getWeightAndHeight(40,30)
+    rectangle.perimeter()
+    rectangle.area()
+    rectangle.drawRetanmgle()
+    // let canvas = document.getElementById("hcn");
+    // let ctx = canvas.getContext('2d');
+    // ctx.fillStyle='#fa4b2a';
+    // ctx.fillRect(10, 10, weight, height)
+</script>
+</body>
+</html>

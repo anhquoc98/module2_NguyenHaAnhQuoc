@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quản lý iphone</title>
+
+</head>
+<style>
+    body {
+        background-color: #cccccc;
+
+    }
+    tr:nth-child(even) {
+        background-color: #D6EEEE;
+    }
+    *
+    {
+        text-align: center !important;
+        margin: auto !important;
+    }
+
+</style>
+<body>
+<h2> DANH SÁCH QUẢN LÝ ĐIỆN THOẠI</h2>
+<hr>
+<button onclick="showSanPham()">Bạn muốn xem điện thoại</button><br>
+<input type="text" id="nhapSanPham">
+<button onclick="addSanPham()">Thêm điện thoại vào quản lý</button>
+
+<div>
+    <table border="5">
+        <tbody id="showResult">
+        <tr>
+            <td>Product Name</td>
+            <th>Edit</th>
+            <th><button onclick="deleteSanPham()">Delete</button> </th>
+        </tr>
+        </tbody>
+
+    </table>
+</div>
+
+<script src="quan_ly_dien_thoai.js"></script>
+</body>
+</html>

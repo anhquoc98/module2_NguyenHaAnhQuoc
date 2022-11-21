@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra từ đối xứng</title>
+</head>
+<body>
+<script>
+
+    let n = prompt("chuổi kí tự");
+    let a = n.split('');
+
+    function kiemTraDoiXung(str) {
+        let result = true;
+        for (let i = 0; i < str.length; i++) {
+            if (str[i] !== str[str.length - 1 - i]) {
+                result = false;
+                break
+            }
+        }
+        if (result) {
+            alert('đối xứng')
+        } else {
+            alert('Không đối xứng')
+        }
+    }
+
+    kiemTraDoiXung(a)
+</script>
+</body>
+</html>
