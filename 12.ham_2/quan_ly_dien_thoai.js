@@ -8,6 +8,7 @@ function showSanPham() {
             '        <th><button onclick="editSanPham('+i+')">Edit</button></th>\n' +
             '        <th><button onclick="deleteSanPham('+i+')">Delete</button></th>\n' +
             '    </tr>'
+
     }
     document.getElementById('showResult').innerHTML = show;
 }

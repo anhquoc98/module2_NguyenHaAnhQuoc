@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phát triển chương trình thể hiện sự tương tác giữa hai đối tượng: công tắc và bóng đèn</title>
+</head>
+<body>
+<script>
+    class ElectricLamp {
+        constructor(status) {
+            this.status = status;
+        }
+        turnLight(){
+            if (this.status){
+                alert('turn on')
+            }
+            else {
+                alert('turn off')
+            }
+        }
+    }
+    class SwitchButton{
+        constructor(status,electricLamp) {
+            this.status=status;
+            this.electriclamp=electricLamp
+        }
+
+
+    }
+</script>
+</body>
+</html>

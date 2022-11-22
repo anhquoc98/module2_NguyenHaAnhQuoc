@@ -40,13 +40,13 @@
             pay = money * (1 + 1/10 * month);
         }
         else if (month <= 12) {
-            pay = money * (1 + 1 / 15 * month)
+            pay = money * (1 + 1 / 15 * month);
         }
         else if (month <= 24) {
-            pay = money * (1 + 1 / 20 * month)
+            pay = money * (1 + 1 / 20 * month);
         }
         else if (month > 24) {
-            pay = money * (1 + 1 / 25 * month)
+            pay = money * (1 + 1 / 25 * month);
         }
         document.getElementById('money1').innerHTML = 'Tiền bạn trả trong vòng' + month + ' tháng = ' + pay;
     }

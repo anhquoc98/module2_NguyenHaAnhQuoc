@@ -9,17 +9,17 @@
 <script>
     let numb =+prompt('Độ dài của dãy số');
     let a =[];
-    let b=[]
+    let b=[];
     for (let i=0;i<numb;i++){
         a[i] =+prompt('Số bạn cần nhập');
         if (a[i]%2 ==0 &&a[i-1]%2==0){
-            b.push('-',a[i])
+            b.push('-',a[i]);
         }
         else {
             b.push(a[i]);
         }
     }
-    document.write(b.join(''))
+    document.write(b.join(''));
 </script>
 </body>
 </html>

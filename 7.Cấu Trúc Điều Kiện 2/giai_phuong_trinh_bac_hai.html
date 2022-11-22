@@ -6,20 +6,20 @@
 </head>
 <body>
 <script>
-    let a = +prompt('Nhập a')
-    let b = +prompt('Nhập b')
-    let c = +prompt('Nhập c')
+    let a = +prompt('Nhập a');
+    let b = +prompt('Nhập b');
+    let c = +prompt('Nhập c');
     let x;
     let x1;
     let denta;
     if (a == 0) {
-        document.write('Phương trình chuyển thành bậc nhất')
+        document.write('Phương trình chuyển thành bậc nhất');
         if (b == 0) {
-            document.write('Phương trình vô nghiệm')
+            document.write('Phương trình vô nghiệm');
         } else if (b !== 0) {
             x = (-c) / b;
 
-        }document.write('<br>phương trình có nghiệm' + x)
+        }document.write('<br>phương trình có nghiệm' + x);
     } else if (a !== 0) {
         denta = (b * b) - (4 * a * c);
         if (denta == 0) {
@@ -32,7 +32,7 @@
             x = ((-b) + Math.sqrt(denta)) / (2 * a);
             x1 = ((-b) - Math.sqrt(denta)) / (2 * a);
         }
-        document.write('Phương trình có nghiệm x1 =' + x1 + ' x2 =' + x)
+        document.write('Phương trình có nghiệm x1 =' + x1 + ' x2 =' + x);
     }
 </script>
 </body>

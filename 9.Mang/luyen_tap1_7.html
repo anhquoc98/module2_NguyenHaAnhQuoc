@@ -14,15 +14,15 @@
     for (let i = 0; i < a; i++) {
         numb[i] = +prompt('Nhập số');
     }
-    let v = +prompt('Nhập phần tử V')
+    let v = +prompt('Nhập phần tử V');
     for (let j = 0; j < numb.length; j++) {
         if (numb[j] == v) {            //ngay đoạn này thay bằng cách 2
-            numb.splice(j, 1)
+            numb.splice(j, 1);
             j--
-            numb.push(0)
+            numb.push(0);
         }
     }
-    document.write(numb)
+    document.write(numb);
 
     //cách 2 mà bị giấu ','
     //let count =0

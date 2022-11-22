@@ -2,33 +2,34 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Viết hàm truyền vào một mảng ký tự, và một ký tự bất kỳ, kiểm tra xem ký tự bất kỳ đó có nằm trong mảng không.
+    <title>Viết hàm truyền vào một mảng ký tự, và một ký tự bất kỳ, kiểm tra xem ký tự bất kỳ đó có nằm trong mảng
+        không.
         Nếu có trả về số lần xuất hiện của ký tự đó, nếu không trả về -1. </title>
 </head>
 <body>
 <script>
-    function result(a,b) {
-        let count =0;
-        for (let i=0;i<a.length;i++){
-            if (a[i]==b){
-                count++
+    function result(a, b) {
+        let count = 0;
+        for (let i = 0; i < a.length; i++) {
+            if (a[i] == b) {
+                count++;
             }
         }
-        if (count>0){
-            return alert('số lần xuất hiện trong mảng'+count+'là giá trị '+b);
-        }
-        else {
+        if (count > 0) {
+            return alert('số lần xuất hiện trong mảng' + count + 'là giá trị ' + b);
+        } else {
             return alert(-1);
         }
 
     }
-    let str1 =[];
-    let length=+prompt("chiều dài mảng ký tự");
-    for (let i=0;i<length;i++){
-        str1[i]=prompt("Nhập kí tự"+'['+i+']');
+
+    let str1 = [];
+    let length = +prompt("chiều dài mảng ký tự");
+    for (let i = 0; i < length; i++) {
+        str1[i] = prompt("Nhập kí tự" + '[' + i + ']');
     }
-    let str =prompt("nhập ký tự");
-   result(str1,str)
+    let str = prompt("nhập ký tự");
+    result(str1, str);
 </script>
 </body>
 </html>

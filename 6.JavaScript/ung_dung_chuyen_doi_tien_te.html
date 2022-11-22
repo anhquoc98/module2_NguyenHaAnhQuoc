@@ -49,16 +49,16 @@
         let to =document.getElementById('To').value;
         let result ;
         if (from =='VND'&&to=='USA'){
-            result='result='+(money/23000)+'$'
+            result='result='+(money/23000)+'$';
         }
         else if (from =='USA'&&to=='VND'){
-            result='result='+(money*23000)+'VND'
+            result='result='+(money*23000)+'VND';
         }
         else if (to =='USA'&&from=='USA'){
-            result='result='+money +'$'
+            result='result='+money +'$';
         }
         else if (to=='VND'&from=='VND'){
-            result='result='+money +'VND'
+            result='result='+money +'VND';
         }
         document.getElementById('result').innerHTML= result;
 

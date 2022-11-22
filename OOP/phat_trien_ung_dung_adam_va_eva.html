@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phát triển ứng dụng nhỏ mô phỏng câu chuyện Adam và Eva</title>
+</head>
+<body>
+<script>
+    class Apple {
+        constructor(weight) {
+            this.weight = weight;
+        }
+
+        isEmpty() {
+            if (this.weight <= 0) {
+                return true;
+            } else {
+                return document.writeln('táo ăn hết rồi');
+            }
+        }
+
+        setApple(weight) {
+            this.weight =weight;
+        }
+
+        decreaseApple() {
+            return --this.weight;
+        }
+    }
+
+    class Human {
+        constructor(name, weight, gender) {
+            this.name = name;
+            this.weight = weight;
+            this.gender = gender;
+        }
+
+        getGenderHumen() {
+            if (this.gender == 1) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        setGenderHumen() {
+            if (this.getGenderHumen() == true) {
+                document.writeln('<br>Xin chào tôi là ' + this.name + '<br>');
+            } else {
+                document.writeln('<br>Xin chào tôi là ' + this.name + '<br>');
+            }
+        }
+
+
+        eatApple(apple) {
+            if (apple.weight > 0) {
+                document.writeln('táo vẫn còn nên ăn táo<br>');
+                document.writeln('số kí đã tăng lên =' + this.weightHuman(apple));
+                document.writeln("<br>số táo đã bị ăn còn" + this.weightApple(apple));
+            } else {
+                document.writeln('Táo đã hết');
+            }
+        }
+
+        weightHuman() {
+            return ++this.weight;
+
+        }
+
+        weightApple(apple) {
+            return apple.decreaseApple();
+        }
+
+        getWeight() {
+            return this.weight;
+        }
+    }
+
+    let apple = new Apple(10);
+    let human = new Human('Adam', 55, 1);
+    let human1 = new Human('Eva', 45, 2);
+    // for (let i=0;i<5;i++){
+    //     human.setGenderHumen()
+    //     human.eatApple(apple)
+    //     human1.setGenderHumen()
+    //     human1.eatApple(apple)
+    // }
+    apple.setApple(15);
+    while (apple.isEmpty() !== true) {
+        human.setGenderHumen();
+        human.eatApple(apple);
+        document.writeln('<br>');
+        human1.setGenderHumen();
+        human1.eatApple(apple);
+        document.writeln('<br>');
+    }
+
+</script>
+</body>
+</html>
