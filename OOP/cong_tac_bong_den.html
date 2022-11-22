@@ -10,23 +10,108 @@
         constructor(status) {
             this.status = status;
         }
-        turnLight(){
-            if (this.status){
-                alert('turn on')
-            }
-            else {
-                alert('turn off')
-            }
-        }
-    }
-    class SwitchButton{
-        constructor(status,electricLamp) {
-            this.status=status;
-            this.electriclamp=electricLamp
+        getStatus(){
+            return this.status;
         }
 
+        turnOn() {
+            this.status = true
+        }
+
+        turnOff() {
+            this.status = false
+        }
 
     }
+
+    class SwitchButton {
+        constructor(status, electricLamp) {
+            this.status = status;
+            this.electriclamp = electricLamp
+        }
+        getLamp(){
+            return this.electriclamp;
+        }
+
+        setLamp(lamp){
+            this.electriclamp = lamp;
+        }
+
+    connectToLamp(electriclamp1)
+    {
+        return this.electriclamp = electriclamp1;
+    }
+
+    switchOff()
+    {
+        this.electriclamp.status;
+        return this.status = false;
+    }
+
+    switchOn()
+    {
+        this.electriclamp.status;
+        return this.status = true;
+    }
+    }
+
+
+    let lamp = new ElectricLamp(false);
+
+    let switchButton = new SwitchButton(lamp, false); // kết nối giữa  công tắc 1 và đèn 1
+
+    for (let i=0;i<10;i++){
+        document.writeln(switchButton.switchOn());
+
+        document.writeln(lamp.getStatus());
+
+        document.writeln(lamp.getStatus());
+        document.writeln(switchButton.switchOff());
+    }
+
+
+
+
+
+    // class ElectricLamp {
+    // //     constructor(status) {
+    //         this.status = status
+    //     }
+    //
+    //     turnOn() {
+    //         this.status = true;
+    //     }
+    //
+    //     turnOff() {
+    //         this.status = false;
+    //     }
+    // }
+    //
+    // class SwitchButton {
+    //     constructor(status, electricLamp) {
+    //         this.status = status;
+    //         this.electricLamp = electricLamp;
+    //     }
+    //
+    //
+    //
+    //     conenectToLamp(electricLamp1) {
+    //         this.electricLamp = electricLamp1;
+    //     }
+    //
+    //     switchOff() {
+    //         this.status = false;
+    //         this.electricLamp.turnOff();
+    //     }
+    //
+    //     switchOn() {
+    //         this.status = true;
+    //         this.electricLamp.turnOn();
+    //     }
+    // }
+    // let electricLamp1 = new ElectricLamp(false);
+    // let switchButton1 = new SwitchButton(false,electricLamp1);
+    // switchButton1.switchOn();
 </script>
 </body>
 </html>
