@@ -7,9 +7,19 @@
 <body>
 <script>
     function reverse(a) {
-        return a.reverse()
+        let first = 0;
+        let last = a.length - 1;
+        while (first < last) {
+            let temp = a[first];
+            a[first] = a[last];
+            a[last] = temp;
+            first++;
+            last--;
+        }
+        return a
     }
-    let array =[1,2,3,43,543,4,2,34,34,2,4,432,3,54,3434];
+
+    let array = [1, 2, 3, 43, 543, 4, 2, 34, 34, 2, 4, 432, 3, 54, 3434];
     document.writeln(reverse(array))
 </script>
 </body>
