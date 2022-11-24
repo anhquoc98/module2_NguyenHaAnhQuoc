@@ -5,23 +5,29 @@
     <title>Title</title>
 </head>
 <body>
-<input type="text" id="nhap">
-<button onclick="googleDich()">GoogleDich</button>
-<p id="result"></p>
+<!--<input type="text" id="nhap">-->
+<!--<button onclick="googleDich()">GoogleDich</button>-->
+<!--<p id="result"></p>-->
 <script>
-    let a =[1,2,3,4,5,6,7,8,9,10];
-    let b =['One','Two','Three','Four','Five','Six','Seven','Eight','Nice','Ten'];
-    function googleDich(){
-    let nhap =document.getElementById('nhap').value;
-    let googleDich ='';
-    for (let i =0;i<a.length;i++){
-        if (nhap == a[i]){
-            googleDich =b[i];
-            document.getElementById('result').innerHTML =googleDich;
-            break;
-        }
-    }
+    // let a =[1,2,3,4,5,6,7,8,9,10];
+    // let b =['One','Two','Three','Four','Five','Six','Seven','Eight','Nice','Ten'];
+    // function googleDich(){
+    // let nhap =document.getElementById('nhap').value;
+    // let googleDich ='';
+    // for (let i =0;i<a.length;i++){
+    //     if (nhap == a[i]){
+    //         googleDich =b[i];
+    //         document.getElementById('result').innerHTML =googleDich;
+    //         break;
+    //     }
+    // }
+    //
+    // }
 
+    let a =prompt('nhập số bạn muốn kiếm');
+    let b =['One','Two','Three','Four','Five','Six','Seven','Eight','Nice','Ten'];
+    for (let i = 0; i <a.length ; i++) {
+        document.writeln(b[a[i]]);
     }
 </script>
 </body>
