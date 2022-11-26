@@ -6,15 +6,40 @@
 </head>
 <body>
 <script>
-    let a =[1,2,3,4,5,6,7];
-    let b =[8,89,1,312,32];
-    let c =[a,b];
-    for (let i = 0; i <c.length ; i++) {
-        
+    let m = [];
+    let n = [];
+    let a = +prompt("chiều dài của m");
+    for (let k = 0; k < a; k++) {
+        m[k] = +prompt("mảng M:" + k);
     }
-    let max =Math.max.apply(null,a)
-    let min =Math.min.apply(null,b)
-    console.log(max ,min)
+    let b = +prompt("chiều dài mảng n");
+    for (let y = 0; y < b; y++) {
+        n[y] = +prompt("Mảng N:" + y);
+    }
+    let mang = [m, n];
+    giaTriMinMax(mang);
+
+    function giaTriMinMax(num) {
+        let min = num[0][0];
+        let max = num[0][0];
+        for (let i = 0; i < num.length; i++) {
+            for (let j = 0; j < num[i].length; j++) {
+                if (max < num[i][j]) {
+                    max = num[i][j];
+                }
+            }
+        }
+        document.write("số lớn nhất ="+max+"<br>")
+        for (let n = 0; n < num.length; n++) {
+            for (let m = 0; m < num[n].length; m++) {
+                if (num[n][m] < min) {
+                    min = num[n][m];
+                }
+            }
+
+        }
+        document.write("số bé nhất ="+min)
+    }
 </script>
 </body>
 </html>
