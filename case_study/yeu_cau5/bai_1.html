@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let numb = +prompt('Nhập độ dài của M');
+    let m = [];
+    for (let i = 0; i < numb; i++) {
+        m[i] = +prompt('Phần tử của M' + (i + 1))
+    }
+    let numb1 = +prompt('Nhập độ dài của N')
+    for (let i = 0; i < numb1; i++) {
+        n[i] = +prompt('Phần tử của N' + (i + 1))
+    }
+    tinhTong(m,n)
+
+    function tinhTong(a, b) {
+        let c = [a, b]
+        let sum = 0;
+        for (let i = 0; i < c.length; i++) {
+            for (let j = 0; j < c[i].length; j++) {
+                if (c[i][j] % 2 == 0) {
+                    sum += c[i][j]
+                }
+            }
+        }
+        document.writeln('hàm tính tổng các số chẵn trong ma trận có kích thước m*n' + sum)
+    }
+
+</script>
+</body>
+</html>

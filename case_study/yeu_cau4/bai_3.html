@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = prompt('nhập xâu kí tự 1');
+    a.split('');
+    let b = prompt('nhập xâu kí tự 2');
+    b.split('');
+    let count =0;
+    for (let i = 0; i < a.length; i++) {
+        for (let j = 0; j < b.length; j++) {
+            if (a[i]==b[j]){
+                a.slice(0,1);
+                count ++;
+            }
+        }
+    }
+    console.log('2 xâu số kí tự chung' +count)
+</script>
+</body>
+</html>
