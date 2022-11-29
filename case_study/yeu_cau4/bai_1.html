@@ -6,27 +6,44 @@
 </head>
 <body>
 <script>
-    let str = prompt('Nhập chuổi');
-    let str1 = str.split(' ');
-    let str2;
-    for (let i = 0; i < str1.length; i++) {
-        str2 = str1[i].split('')
-        str2[0] = str2[0].toUpperCase();
-        for (let j = 1; j < str2.length; j++) {
-            str2[j] = str2[j].toLowerCase();
-        }
-        document.writeln(str2.join(''))
+    // let str = prompt('Nhập chuổi');
+    // let str1 = str.split(' ');
+    // let str2;
+    // for (let i = 0; i < str1.length; i++) {
+    //     str2 = str1[i].split('')
+    //     str2[0] = str2[0].toUpperCase();
+    //     for (let j = 1; j < str2.length; j++) {
+    //         str2[j] = str2[j].toLowerCase();
+    //     }
+    //     document.writeln(str2.join(''))
+    // }
+    // let max ='';
+    // let maxlength=0;
+    // for (let i=0;i<str2.length;i++){
+    //     if (str2[i].length>maxlength){
+    //         maxlength =str2[i].length;
+    //         max =str2[i];
+    //     }
+    //
+    // }
+    // document.write("chuổi dài"+max+"có kí tự"+maxlength);
+    let str = prompt('Nhập xâu ký tự');
+    str = str.toLowerCase();
+    let mangStr = str.split(' ');
+    for (let i = 0; i < mangStr.length; i++){
+        mangStr[i] = mangStr[i].charAt(0).toUpperCase() + mangStr[i].substring(1);
     }
+    document.writeln(mangStr.join(' '));
     let max ='';
     let maxlength=0;
-    for (let i=0;i<str2.length;i++){
-        if (str2[i].length>maxlength){
-            maxlength =str2[i].length;
-            max =str2[i];
+    for (let i=0;i<mangStr.length;i++){
+        if (mangStr[i].length>maxlength){
+            maxlength =mangStr[i].length;
+            max =mangStr[i];
         }
 
     }
-    document.write("chuổi dài"+max+"có kí tự"+maxlength);
+    document.writeln('<br>chuổi dài'+max+'có kí tự'+maxlength)
 
 </script>
 </body>

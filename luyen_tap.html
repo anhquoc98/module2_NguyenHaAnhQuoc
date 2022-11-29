@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a =[1,9,2,3,4]
+    findMaxNumber(a)
+    function findMaxNumber(a) {
+        for (let i=0;i<a.length;i++){
+            if (a.length !==4){
+                document.write(-1) ;
+                break;
+            }
+            else if (a.length === 4){
+                if (a[i]>a[i-1]){
+                    a.splice(i-1,1);
+                    break;
+
+                }
+                if (a[i]<a[i-1]){
+                    a.splice(i,1);
+                    break;
+                }
+            }
+        }
+document.write(a.join(''))
+    }
+</script>
+</body>
+</html>
