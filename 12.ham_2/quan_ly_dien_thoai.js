@@ -5,7 +5,7 @@ function showSanPham() {
     for (let i = 0; i < sanPham.length; i++) {
         show += ' <tr>\n' +
             '        <td>'+sanPham[i]+'</td>\n' +
-            '        <th> </th>\n' +
+            '        <th><button onclick="editSanPham('+i+')">edit</button></th>\n' +
             '        <th><button onclick="deleteSanPham('+i+')">Delete</button></th>\n' +
             '    </tr>'
 

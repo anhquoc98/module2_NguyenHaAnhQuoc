@@ -12,7 +12,7 @@
 //     numb[i]=+prompt("Bạn muốn lấy số mấy"+'['+(i+1)+']')
 // }
 // }
-class GameTrungThuong {
+class VeTrungThuong {
     constructor(number,number1,number2,number3,number4,number5){
     this.number =number
     this.number1 =number1
@@ -47,18 +47,21 @@ class GiaiThuong {
         numb4 =Math.floor(Math.random()*this.numb4);
     }
 }
-
-let a = new GameTrungThuong(' <td><input type="number"></td>',)
-let show =''
-for (let i=0;i<3;i++){
-    show='<table>\n' +
-        '    <tr>\n' +
-        '        <td><input type="number"></td>\n' +
-        '        <td><input type="number"></td>\n' +
-        '        <td><input type="number"></td>\n' +
-        '        <td><input type="number"></td>\n' +
-        '        <td><input type="number"></td>\n' +
-        '        <td><input type="number"></td>\n' +
-        '    </tr>\n'
-}
-document.getElementById('Gametr')
+let veSo = new VeTrungThuong(32,32,76,47,24,98)
+let to1 =[];
+to1.push(veSo);
+console.log(veSo)
+// let a = new GameTrungThuong(' <td><input type="number"></td>',)
+// let show =''
+// for (let i=0;i<3;i++){
+//     show='<table>\n' +
+//         '    <tr>\n' +
+//         '        <td><input type="number"></td>\n' +
+//         '        <td><input type="number"></td>\n' +
+//         '        <td><input type="number"></td>\n' +
+//         '        <td><input type="number"></td>\n' +
+//         '        <td><input type="number"></td>\n' +
+//         '        <td><input type="number"></td>\n' +
+//         '    </tr>\n'
+// }
+document.write()
